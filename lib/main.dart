@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ticker_app/base/bottom_nav_bar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,13 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.red,
-          title: const Text("My Flutter real 1rs app"),
-        ) ,
-        body: Center(child: Text("Hello Flutter"),),
-      ),
+      home: BottomNavBar()
     );
   }
 }
