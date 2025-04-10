@@ -1,4 +1,6 @@
+import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:ticker_app/base/res/media.dart';
 import 'package:ticker_app/base/res/styles/app_styles.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -7,9 +9,11 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppStyles.bgColor,
       // We want a scrollable effect
       body: ListView(
         children: [
+          const SizedBox(height: 40),
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
@@ -31,12 +35,33 @@ class HomeScreen extends StatelessWidget {
                         ),
                       ],
                     ),
-                    Container(color: Colors.red, width: 100, height: 70),
+                    Container(
+
+                      width: 50,
+                      height: 50,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        image: DecorationImage(
+                          image: AssetImage(AppMedia.logo),
+                        ),
+                      ),
+                    ),
                   ],
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [Text("Search Icon"), Text("Text Search")],
+                const SizedBox(height: 16,),
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: const Color(0xFFF4F6FD),
+                  ),
+                  child: Row(
+                    //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Icon(FluentSystemIcons.ic_fluent_search_regular, color: Color(0xFFBFC205),),
+                      Text("Search"),
+                    ],
+                  ),
                 ),
               ],
             ),
