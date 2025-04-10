@@ -1,5 +1,6 @@
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:ticker_app/base/screens/home_screen.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});
@@ -9,8 +10,8 @@ class BottomNavBar extends StatefulWidget {
 }
 
 class _BottomNavBarState extends State<BottomNavBar> {
-  List<Center> get appScreens => const [
-    Center(child: Text("Home")),
+  final appScreens = [
+    const HomeScreen(),
     Center(child: Text("Search")),
     Center(child: Text("Tickets")),
     Center(child: Text("Profile")),
